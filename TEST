@@ -1,0 +1,43 @@
+#
+# state links:
+#	s<number>
+#
+# dependency links
+#	d<number>
+#
+
+# given a list of links:
+links = [
+	('s1','s3'),
+	('s1','d1'),
+	('s1','d2'),
+	('s2','d4'),
+	('s2','d3'),
+	('s3','s2'),
+	('s3','d1'),
+	('s2','s4'),
+	('d3','d2'),
+	('s4','d3')
+]
+
+# starting on state 1 (s1)
+# for each state
+# return which dependencies to launch
+# or to remove and the next state to launch
+
+# example (not the problem above):
+def solve(links):
+	# ...
+	return {
+		"s1": {
+			"launch": ['d1','d2'],
+			"destroy": [],
+			"next": 's3'
+		},
+		"s2": {
+			"launch": ['d3','d1'],
+			"destroy": ['d2'],
+			"next": None
+		},
+		# ...
+	}
