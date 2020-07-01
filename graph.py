@@ -24,8 +24,8 @@ class Graph:
         graph.insert_links(links)
         return graph
     
-    def __init__(self, nodes={}):
-        self.nodes = nodes
+    def __init__(self):
+        self.nodes = {}
     
     def insert_links(self, links):
         for link in links:

@@ -65,15 +65,15 @@ class TestSolution(TestCase):
         ]
         expected = {
             's1': {
-                'launch': ['d1','d3', 'd2'],
+                'launch': ['d2','d3', 'd1'],
                 'next': 's2'
             },
             's2': {
-                'launch': ['d3', 'd2', 'd6', 'd1', 'd5', 'd4'],
+                'launch': ['d3', 'd4', 'd5', 'd1', 'd6', 'd2'],
                 'next': 's3'
             },
             's3': {
-                'launch': ['d7', 'd2', 'd1', 'd9', 'd5', 'd8'],
+                'launch': ['d2', 'd7', 'd5', 'd1', 'd8', 'd9'],
                 'next': None
             }
         }

@@ -1,0 +1,5 @@
+1. Can a State Node have multiple State Nodes as children?
+2. Could a Dependecy Node have a State Node as its child?
+3. For each State Node, does the order of execution of the Dependencies matter?
+4. Can we have duplicate Dependencies per State execution? Or should I put every dependency in only once?
+5. Design thought: is having a type attribute on the Node class enough? Or should I implement a class for each type with inheritance?
