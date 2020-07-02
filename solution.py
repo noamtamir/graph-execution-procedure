@@ -5,7 +5,7 @@ def solution(links):
     if not links:
         return {}
     graph = Graph.from_links(links)
-    return graph.get_execution_procedure(graph.nodes['s1'])
+    return graph.get_launch_sequence(graph.nodes['s1'])
 
 
 if __name__ == "__main__":
@@ -21,5 +21,5 @@ if __name__ == "__main__":
         ('d3','d2'),
         ('s4','d3')
     ]
-    execution_procedure = solution(links)
-    print(execution_procedure)
+    launch_sequence = solution(links)
+    print(launch_sequence)
