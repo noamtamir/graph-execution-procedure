@@ -1,4 +1,0 @@
-1. Can a State Node have multiple State Nodes as children? In other words, is there only 1 "next" state possible?
-2. Could a Dependecy Node have a State Node as its child?
-3. For each State Node, does the order of execution of the Dependencies matter? If so, should I list them from the bottom up? for example, if d1 depends on d2, and d2 depends on d3, should they be listed: [d3,d2,d1] ?
-4. Can we have duplicate Dependencies per State execution? Or should I put every dependency in only once?
