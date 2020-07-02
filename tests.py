@@ -34,13 +34,13 @@ class TestSolution(TestCase):
                 'next': None
             }
         }
-        self.assertEquals(solution(links), expected)
+        self.assertEqual(solution(links), expected)
     
     def test_empty_list(self):
-        self.assertEquals(solution([]), {})
+        self.assertEqual(solution([]), {})
 
     def test_single_link(self):
-        self.assertEquals(solution([('s1', 'd1')]), {'s1': {'launch': ['d1'], 'next': None}})
+        self.assertEqual(solution([('s1', 'd1')]), {'s1': {'launch': ['d1'], 'next': None}})
 
     def test_nested_dependencies(self):
         links = [
@@ -78,7 +78,7 @@ class TestSolution(TestCase):
                 'next': None
             }
         }
-        self.assertEquals(solution(links), expected)
+        self.assertEqual(solution(links), expected)
 
     def test_illegal_nodes(self):
         with self.assertRaises(IllegalNode):
