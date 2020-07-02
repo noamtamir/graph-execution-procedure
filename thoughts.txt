@@ -1,5 +1,5 @@
 1. Create a Graph data structure.
 2. Distinguish between 'state' nodes, and 'dependency' nodes.
 3. The Graph should be constructed from a list of links.
-4. create an get_execution_procedure function, that lists all the dependency nodes (including nested) connected to a state node,
+4. Create an get_execution_procedure function, that lists all the dependency nodes (including nested) connected to a state node,
     and then moves on to the next state, and does the same, recursivley.
