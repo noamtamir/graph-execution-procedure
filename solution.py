@@ -5,7 +5,7 @@ def solution(links):
     if not links:
         return {}
     graph = Graph.from_links(links)
-    return graph.get_launch_sequence(graph.nodes['s1'])
+    return graph.get_launch_sequence()
 
 
 if __name__ == "__main__":

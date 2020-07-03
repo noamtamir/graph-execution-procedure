@@ -26,13 +26,13 @@ class Node:
         return f'{str(self)} : {[str(node) for node in self.linked_nodes]}'
     
     def get_dependencies(self):
-        dependecies = []
+        node_dependecies = []
         for dependency in self.dependencies:
             dependency_dependecies = dependency.get_dependencies()
-            dependecies.insert(0, dependency)
-            dependecies = dependency_dependecies + dependecies
+            node_dependecies.insert(0, dependency)
+            node_dependecies = dependency_dependecies + node_dependecies
         seen = set()
-        dependecies = [x for x in dependecies if not (x in seen or seen.add(x))] # clean up duplicates, if dependency has already been launched
+        dependecies = [x for x in node_dependecies if not (x in seen or seen.add(x))] # clean up duplicates, if dependency has already been launched
         return dependecies
 
 
@@ -74,6 +74,8 @@ class Graph:
         return {value: [str(linked_node) for linked_node in node.linked_nodes] for value, node in self.nodes.items()}
     
     def get_launch_sequence(self, state_node=None, launch_sequence=None):
+        if state_node is None:
+            state_node = self.nodes['s1']
         if launch_sequence is None:
             launch_sequence={}
         dependecies = state_node.get_dependencies()
